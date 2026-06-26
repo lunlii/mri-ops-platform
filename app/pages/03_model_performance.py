@@ -10,6 +10,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
+import shap
 
 st.set_page_config(page_title="Model Performance", page_icon="🤖", layout="wide")
 
@@ -50,8 +51,15 @@ def load_predictions():
 
     return df_test
 
+@st.cache_resource
+def load_models():
+    duration_model  = joblib.load(f"{ARTIFACT_DIR}/duration_model.pkl")
+    adherence_model = joblib.load(f"{ARTIFACT_DIR}/adherence_model.pkl")
+    return duration_model, adherence_model
+
 duration_metrics, adherence_metrics = load_metrics()
 df_test = load_predictions()
+duration_model, adherence_model = load_models()
 
 st.title("🤖 Model Performance")
 st.caption("Evaluation of the two ML models on held-out 2024 test data.")
@@ -94,6 +102,41 @@ with tab1:
     fig2.add_hline(y=0, line_dash="dash", line_color="gray")
     fig2.update_layout(height=350)
     st.plotly_chart(fig2, use_container_width=True)
+
+st.subheader("Feature Importance (SHAP)")
+with st.spinner("Computing SHAP values (this may take a moment)..."):
+    feature_cols = [
+            "procedure_code", "complexity", "day_of_week", "time_bucket",
+            "scanner_id", "site", "field_strength",
+            "template_duration_min", "hour_of_day", "is_contrast"
+    ]
+    sample_100 = df_test.sample(100, random_state=42)
+    X_sample = sample_100[feature_cols].copy()
+    X_sample["is_contrast"] = X_sample["is_contrast"].astype(int)
+
+    X_transformed = duration_model.named_steps["preprocessor"].transform(X_sample)
+
+    explainer = shap.TreeExplainer(duration_model.named_steps["regressor"])
+    shap_values = explainer.shap_values(X_transformed)
+
+    shap_df = pd.DataFrame({
+        "Feature": feature_cols,
+        "Mean |SHAP|": abs(shap_values).mean(axis=0)
+    }).sort_values("Mean |SHAP|", ascending=True)
+
+    fig3 = px.bar(
+        shap_df,
+        x="Mean |SHAP|",
+        y="Feature",
+        orientation="h",
+        title="Feature Importance — Mean Absolute SHAP Value (Duration Model)",
+        labels={"Mean |SHAP|": "Mean |SHAP Value| (minutes)", "Feature": ""},
+        color="Mean |SHAP|",
+        color_continuous_scale="Blues",
+    )
+    fig3.update_layout(height=400, showlegend=False)
+    st.plotly_chart(fig3, use_container_width=True)
+    st.caption("SHAP values show the average impact of each feature on predicted exam duration. Higher = more influential.")
 
 # ── Adherence Model ───────────────────────────────────────────────────────────
 with tab2:
