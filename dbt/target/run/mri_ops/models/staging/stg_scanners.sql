@@ -1,0 +1,20 @@
+
+  
+  create view "mri_ops"."main"."stg_scanners__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/synthetic/scanners.csv')
+),
+
+renamed as (
+    select
+        scanner_id,
+        site,
+        field_strength,
+        status,
+        open_bore::boolean    as open_bore,
+        delay_bias_min::float as delay_bias_min
+    from source
+)
+
+select * from renamed
+  );

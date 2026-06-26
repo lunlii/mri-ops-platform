@@ -1,0 +1,1675 @@
+[0m07:31:44.488591 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111353e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1114a6390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1114a68d0>]}
+
+
+============================== 07:31:44.495041 | a67503cd-0cff-4d84-a400-3f03317cb68a ==============================
+[0m07:31:44.495041 [info ] [MainThread]: Running with dbt=1.11.11
+[0m07:31:44.495575 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'version_check': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'debug': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'target_path': 'None', 'log_path': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/logs', 'printer_width': '80', 'profiles_dir': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt', 'warn_error': 'None', 'cache_selected_only': 'False', 'partial_parse': 'True', 'write_json': 'True', 'introspect': 'True', 'fail_fast': 'False', 'empty': 'None', 'log_cache_events': 'False', 'use_colors': 'True', 'static_parser': 'True', 'quiet': 'False'}
+[0m07:31:44.509845 [info ] [MainThread]: dbt version: 1.11.11
+[0m07:31:44.510279 [info ] [MainThread]: python version: 3.11.15
+[0m07:31:44.510758 [info ] [MainThread]: python path: /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/.venv311/bin/python3.11
+[0m07:31:44.511115 [info ] [MainThread]: os info: macOS-26.3.1-x86_64-i386-64bit
+[0m07:31:44.737233 [info ] [MainThread]: Using profiles dir at /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt
+[0m07:31:44.737682 [info ] [MainThread]: Using profiles.yml file at /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/profiles.yml
+[0m07:31:44.737925 [info ] [MainThread]: Using dbt_project.yml file at /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/dbt_project.yml
+[0m07:31:44.739646 [info ] [MainThread]: adapter type: duckdb
+[0m07:31:44.740001 [info ] [MainThread]: adapter version: 1.10.1
+[0m07:31:44.816402 [info ] [MainThread]: Configuration:
+[0m07:31:44.816839 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m07:31:44.817068 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m07:31:44.817569 [info ] [MainThread]: Required dependencies:
+[0m07:31:44.817906 [debug] [MainThread]: Executing "git --help"
+[0m07:31:45.192802 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m07:31:45.193815 [debug] [MainThread]: STDERR: "b''"
+[0m07:31:45.194161 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m07:31:45.194469 [info ] [MainThread]: Connection:
+[0m07:31:45.194792 [info ] [MainThread]:   database: mri_ops
+[0m07:31:45.195016 [info ] [MainThread]:   schema: main
+[0m07:31:45.195340 [info ] [MainThread]:   path: ../data/mri_ops.duckdb
+[0m07:31:45.195659 [info ] [MainThread]:   config_options: None
+[0m07:31:45.195888 [info ] [MainThread]:   extensions: None
+[0m07:31:45.196112 [info ] [MainThread]:   settings: {}
+[0m07:31:45.196338 [info ] [MainThread]:   external_root: .
+[0m07:31:45.196558 [info ] [MainThread]:   use_credential_provider: None
+[0m07:31:45.196773 [info ] [MainThread]:   attach: None
+[0m07:31:45.197086 [info ] [MainThread]:   filesystems: None
+[0m07:31:45.197365 [info ] [MainThread]:   remote: None
+[0m07:31:45.197595 [info ] [MainThread]:   plugins: None
+[0m07:31:45.197816 [info ] [MainThread]:   disable_transactions: False
+[0m07:31:45.198388 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:31:45.755241 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m07:31:45.806633 [debug] [MainThread]: Using duckdb connection "debug"
+[0m07:31:45.807149 [debug] [MainThread]: On debug: select 1 as id
+[0m07:31:45.807571 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:31:45.838331 [debug] [MainThread]: SQL status: OK in 0.030 seconds
+[0m07:31:45.839567 [debug] [MainThread]: On debug: Close
+[0m07:31:45.840182 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m07:31:45.840464 [info ] [MainThread]: [32mAll checks passed![0m
+[0m07:31:46.201136 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.9589146, "process_in_blocks": "0", "process_kernel_time": 0.358594, "process_mem_max_rss": "137637888", "process_out_blocks": "0", "process_user_time": 1.427741}
+[0m07:31:46.201857 [debug] [MainThread]: Command `dbt debug` succeeded at 07:31:46.201720 after 1.96 seconds
+[0m07:31:46.202441 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m07:31:46.202919 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111338c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11141a790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b45edd0>]}
+[0m07:31:46.203322 [debug] [MainThread]: Flushing usage events
+[0m07:31:46.808797 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:32:16.923032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ef00d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11106b190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110839d0>]}
+
+
+============================== 07:32:16.928873 | 2c603505-b328-4e17-abf5-e0ce3b9c47a5 ==============================
+[0m07:32:16.928873 [info ] [MainThread]: Running with dbt=1.11.11
+[0m07:32:16.929458 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'use_colors': 'True', 'no_print': 'None', 'introspect': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'log_format': 'default', 'warn_error': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/logs', 'profiles_dir': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'printer_width': '80', 'empty': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'target_path': 'None'}
+[0m07:32:17.264958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2c603505-b328-4e17-abf5-e0ce3b9c47a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110eb510>]}
+[0m07:32:17.312923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2c603505-b328-4e17-abf5-e0ce3b9c47a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110123d10>]}
+[0m07:32:17.315563 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:32:17.432697 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m07:32:17.433471 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m07:32:17.433809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2c603505-b328-4e17-abf5-e0ce3b9c47a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111093390>]}
+[0m07:32:18.064802 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.mri_ops.staging
+- models.mri_ops.intermediate
+- models.mri_ops.marts
+[0m07:32:18.068815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2c603505-b328-4e17-abf5-e0ce3b9c47a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11106a9d0>]}
+[0m07:32:18.107651 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/manifest.json
+[0m07:32:18.109550 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/semantic_manifest.json
+[0m07:32:18.117982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2c603505-b328-4e17-abf5-e0ce3b9c47a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11126cc10>]}
+[0m07:32:18.118405 [info ] [MainThread]: Found 485 macros
+[0m07:32:18.118675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2c603505-b328-4e17-abf5-e0ce3b9c47a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db92190>]}
+[0m07:32:18.119770 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m07:32:18.120218 [debug] [MainThread]: Command end result
+[0m07:32:18.141546 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/manifest.json
+[0m07:32:18.142977 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/semantic_manifest.json
+[0m07:32:18.145475 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/run_results.json
+[0m07:32:18.148881 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3169707, "process_in_blocks": "0", "process_kernel_time": 0.356383, "process_mem_max_rss": "139563008", "process_out_blocks": "0", "process_user_time": 2.084299}
+[0m07:32:18.149282 [debug] [MainThread]: Command `dbt run` succeeded at 07:32:18.149205 after 1.32 seconds
+[0m07:32:18.149689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c49d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af02890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b09f550>]}
+[0m07:32:18.150135 [debug] [MainThread]: Flushing usage events
+[0m07:32:18.877009 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:37:08.229414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ef16d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fb1d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fcb050>]}
+
+
+============================== 07:37:08.235201 | 590b1b32-33e4-453b-aac9-53028a2e9ccd ==============================
+[0m07:37:08.235201 [info ] [MainThread]: Running with dbt=1.11.11
+[0m07:37:08.235987 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'profiles_dir': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt', 'log_cache_events': 'False', 'log_format': 'default', 'no_print': 'None', 'partial_parse': 'True', 'debug': 'False', 'empty': 'False', 'log_path': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/logs', 'write_json': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'quiet': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'warn_error': 'None'}
+[0m07:37:08.559411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11102ec90>]}
+[0m07:37:08.604838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11006be50>]}
+[0m07:37:08.607195 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:37:08.724614 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m07:37:08.789534 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 10 files added, 0 files changed.
+[0m07:37:08.790018 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/staging/stg_appointments.sql
+[0m07:37:08.790346 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/staging/stg_exam_logs.sql
+[0m07:37:08.790612 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/staging/stg_scanners.sql
+[0m07:37:08.790846 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/intermediate/int_schedule_adherence.sql
+[0m07:37:08.791074 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/intermediate/int_exam_durations.sql
+[0m07:37:08.791399 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/staging/schema.yml
+[0m07:37:08.791633 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/marts/mart_daily_scanner_performance.sql
+[0m07:37:08.791880 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/staging/stg_procedures.sql
+[0m07:37:08.792096 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/marts/mart_ml_features.sql
+[0m07:37:08.792312 [debug] [MainThread]: Partial parsing: added file: mri_ops://models/marts/mart_procedure_variability.sql
+[0m07:37:09.184723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111772990>]}
+[0m07:37:09.250534 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/manifest.json
+[0m07:37:09.252353 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/semantic_manifest.json
+[0m07:37:09.261523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1117bd510>]}
+[0m07:37:09.261956 [info ] [MainThread]: Found 9 models, 16 data tests, 485 macros
+[0m07:37:09.262233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111963dd0>]}
+[0m07:37:09.263903 [info ] [MainThread]: 
+[0m07:37:09.264203 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m07:37:09.264425 [info ] [MainThread]: 
+[0m07:37:09.264792 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:37:09.268585 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_mri_ops'
+[0m07:37:09.320764 [debug] [ThreadPool]: Using duckdb connection "list_mri_ops"
+[0m07:37:09.321143 [debug] [ThreadPool]: On list_mri_ops: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "connection_name": "list_mri_ops"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"mri_ops"'
+    
+  
+  
+[0m07:37:09.321375 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:37:09.359194 [debug] [ThreadPool]: SQL status: OK in 0.038 seconds
+[0m07:37:09.361199 [debug] [ThreadPool]: On list_mri_ops: Close
+[0m07:37:09.361764 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mri_ops, now create_mri_ops_main)
+[0m07:37:09.362442 [debug] [ThreadPool]: Creating schema "database: "mri_ops"
+schema: "main"
+"
+[0m07:37:09.367670 [debug] [ThreadPool]: Using duckdb connection "create_mri_ops_main"
+[0m07:37:09.367972 [debug] [ThreadPool]: On create_mri_ops_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "connection_name": "create_mri_ops_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='mri_ops'
+        and type='sqlite'
+    
+  
+[0m07:37:09.368200 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m07:37:09.370048 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m07:37:09.370945 [debug] [ThreadPool]: Using duckdb connection "create_mri_ops_main"
+[0m07:37:09.371170 [debug] [ThreadPool]: On create_mri_ops_main: BEGIN
+[0m07:37:09.371529 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:09.371744 [debug] [ThreadPool]: Using duckdb connection "create_mri_ops_main"
+[0m07:37:09.371952 [debug] [ThreadPool]: On create_mri_ops_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "connection_name": "create_mri_ops_main"} */
+
+    
+    
+        create schema if not exists "mri_ops"."main"
+    
+[0m07:37:09.373369 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m07:37:09.374001 [debug] [ThreadPool]: On create_mri_ops_main: COMMIT
+[0m07:37:09.374240 [debug] [ThreadPool]: Using duckdb connection "create_mri_ops_main"
+[0m07:37:09.374454 [debug] [ThreadPool]: On create_mri_ops_main: COMMIT
+[0m07:37:09.374811 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:09.375040 [debug] [ThreadPool]: On create_mri_ops_main: Close
+[0m07:37:09.376511 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_mri_ops_main'
+[0m07:37:09.380403 [debug] [ThreadPool]: Using duckdb connection "list_mri_ops_main"
+[0m07:37:09.380654 [debug] [ThreadPool]: On list_mri_ops_main: BEGIN
+[0m07:37:09.380897 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:37:09.381361 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m07:37:09.381590 [debug] [ThreadPool]: Using duckdb connection "list_mri_ops_main"
+[0m07:37:09.381809 [debug] [ThreadPool]: On list_mri_ops_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "connection_name": "list_mri_ops_main"} */
+select
+      'mri_ops' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'mri_ops'
+  
+[0m07:37:09.392150 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m07:37:09.393198 [debug] [ThreadPool]: On list_mri_ops_main: ROLLBACK
+[0m07:37:09.394060 [debug] [ThreadPool]: Failed to rollback 'list_mri_ops_main'
+[0m07:37:09.394294 [debug] [ThreadPool]: On list_mri_ops_main: Close
+[0m07:37:09.394694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111181ed0>]}
+[0m07:37:09.395048 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:09.395254 [debug] [MainThread]: On master: BEGIN
+[0m07:37:09.395446 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:37:09.395891 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:09.396112 [debug] [MainThread]: On master: COMMIT
+[0m07:37:09.396325 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:09.396528 [debug] [MainThread]: On master: COMMIT
+[0m07:37:09.396893 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:09.397169 [debug] [MainThread]: On master: Close
+[0m07:37:09.399600 [debug] [Thread-1 (]: Began running node model.mri_ops.stg_appointments
+[0m07:37:09.399985 [info ] [Thread-1 (]: 1 of 9 START sql view model main.stg_appointments .............................. [RUN]
+[0m07:37:09.400312 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly create_mri_ops_main, now model.mri_ops.stg_appointments)
+[0m07:37:09.400588 [debug] [Thread-1 (]: Began compiling node model.mri_ops.stg_appointments
+[0m07:37:09.406272 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.stg_appointments"
+[0m07:37:09.407104 [debug] [Thread-1 (]: Began executing node model.mri_ops.stg_appointments
+[0m07:37:09.428341 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.stg_appointments"
+[0m07:37:09.429205 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_appointments"
+[0m07:37:09.429487 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: BEGIN
+[0m07:37:09.429941 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:09.430633 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.430956 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_appointments"
+[0m07:37:09.431252 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_appointments"} */
+
+  
+  create view "mri_ops"."main"."stg_appointments__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/synthetic/appointments.csv')
+),
+
+renamed as (
+    select
+        appointment_id,
+        patient_id,
+        procedure_code,
+        scanner_id,
+        site,
+        scheduled_start::timestamp     as scheduled_start,
+        scheduled_end::timestamp       as scheduled_end,
+        template_duration_min::integer as template_duration_min,
+        day_of_week,
+        hour_of_day::integer           as hour_of_day,
+        is_contrast::boolean           as is_contrast,
+        complexity
+    from source
+)
+
+select * from renamed
+  );
+
+[0m07:37:09.597363 [debug] [Thread-1 (]: SQL status: OK in 0.166 seconds
+[0m07:37:09.602295 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_appointments"
+[0m07:37:09.602626 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_appointments"} */
+alter view "mri_ops"."main"."stg_appointments__dbt_tmp" rename to "stg_appointments"
+[0m07:37:09.604234 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.612671 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: COMMIT
+[0m07:37:09.613042 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_appointments"
+[0m07:37:09.613301 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: COMMIT
+[0m07:37:09.616325 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:37:09.620359 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_appointments"
+[0m07:37:09.620659 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_appointments"} */
+
+      drop view if exists "mri_ops"."main"."stg_appointments__dbt_backup" cascade
+    
+[0m07:37:09.622417 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.625848 [debug] [Thread-1 (]: On model.mri_ops.stg_appointments: Close
+[0m07:37:09.627363 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1118a7fd0>]}
+[0m07:37:09.627939 [info ] [Thread-1 (]: 1 of 9 OK created sql view model main.stg_appointments ......................... [[32mOK[0m in 0.23s]
+[0m07:37:09.628812 [debug] [Thread-1 (]: Finished running node model.mri_ops.stg_appointments
+[0m07:37:09.629176 [debug] [Thread-1 (]: Began running node model.mri_ops.stg_exam_logs
+[0m07:37:09.629596 [info ] [Thread-1 (]: 2 of 9 START sql view model main.stg_exam_logs ................................. [RUN]
+[0m07:37:09.629970 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.stg_appointments, now model.mri_ops.stg_exam_logs)
+[0m07:37:09.630364 [debug] [Thread-1 (]: Began compiling node model.mri_ops.stg_exam_logs
+[0m07:37:09.632744 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.stg_exam_logs"
+[0m07:37:09.633374 [debug] [Thread-1 (]: Began executing node model.mri_ops.stg_exam_logs
+[0m07:37:09.635890 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.stg_exam_logs"
+[0m07:37:09.636378 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_exam_logs"
+[0m07:37:09.636635 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: BEGIN
+[0m07:37:09.636885 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:09.637564 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.637844 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_exam_logs"
+[0m07:37:09.638136 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_exam_logs"} */
+
+  
+  create view "mri_ops"."main"."stg_exam_logs__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/synthetic/actual_exam_logs.csv')
+),
+
+renamed as (
+    select
+        log_id,
+        appointment_id,
+        actual_start::timestamp      as actual_start,
+        actual_end::timestamp        as actual_end,
+        actual_duration_min::float   as actual_duration_min,
+        start_delay_min::float       as start_delay_min,
+        end_delta_min::float         as end_delta_min,
+        adherent::boolean            as adherent,
+        delay_reason,
+        technologist_id
+    from source
+)
+
+select * from renamed
+  );
+
+[0m07:37:09.777949 [debug] [Thread-1 (]: SQL status: OK in 0.139 seconds
+[0m07:37:09.780520 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_exam_logs"
+[0m07:37:09.780813 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_exam_logs"} */
+alter view "mri_ops"."main"."stg_exam_logs__dbt_tmp" rename to "stg_exam_logs"
+[0m07:37:09.781355 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.782252 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: COMMIT
+[0m07:37:09.782522 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_exam_logs"
+[0m07:37:09.782763 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: COMMIT
+[0m07:37:09.783447 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.785193 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_exam_logs"
+[0m07:37:09.785469 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_exam_logs"} */
+
+      drop view if exists "mri_ops"."main"."stg_exam_logs__dbt_backup" cascade
+    
+[0m07:37:09.785940 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.786999 [debug] [Thread-1 (]: On model.mri_ops.stg_exam_logs: Close
+[0m07:37:09.787441 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111c9c310>]}
+[0m07:37:09.787922 [info ] [Thread-1 (]: 2 of 9 OK created sql view model main.stg_exam_logs ............................ [[32mOK[0m in 0.16s]
+[0m07:37:09.788603 [debug] [Thread-1 (]: Finished running node model.mri_ops.stg_exam_logs
+[0m07:37:09.788960 [debug] [Thread-1 (]: Began running node model.mri_ops.stg_procedures
+[0m07:37:09.789469 [info ] [Thread-1 (]: 3 of 9 START sql view model main.stg_procedures ................................ [RUN]
+[0m07:37:09.789875 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.stg_exam_logs, now model.mri_ops.stg_procedures)
+[0m07:37:09.790165 [debug] [Thread-1 (]: Began compiling node model.mri_ops.stg_procedures
+[0m07:37:09.792649 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.stg_procedures"
+[0m07:37:09.793200 [debug] [Thread-1 (]: Began executing node model.mri_ops.stg_procedures
+[0m07:37:09.797249 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.stg_procedures"
+[0m07:37:09.798405 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_procedures"
+[0m07:37:09.798809 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: BEGIN
+[0m07:37:09.799087 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:09.799712 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.799971 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_procedures"
+[0m07:37:09.800244 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_procedures"} */
+
+  
+  create view "mri_ops"."main"."stg_procedures__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/synthetic/procedures.csv')
+),
+
+renamed as (
+    select
+        procedure_id::integer          as procedure_id,
+        procedure_code,
+        procedure_name,
+        template_duration_min::integer as template_duration_min,
+        contrast_required::boolean     as contrast_required,
+        complexity,
+        duration_std_pct::float        as duration_std_pct
+    from source
+)
+
+select * from renamed
+  );
+
+[0m07:37:09.804447 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m07:37:09.807181 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_procedures"
+[0m07:37:09.807584 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_procedures"} */
+alter view "mri_ops"."main"."stg_procedures__dbt_tmp" rename to "stg_procedures"
+[0m07:37:09.808218 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.809233 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: COMMIT
+[0m07:37:09.809588 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_procedures"
+[0m07:37:09.810012 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: COMMIT
+[0m07:37:09.810950 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.812970 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_procedures"
+[0m07:37:09.813292 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_procedures"} */
+
+      drop view if exists "mri_ops"."main"."stg_procedures__dbt_backup" cascade
+    
+[0m07:37:09.813819 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.814863 [debug] [Thread-1 (]: On model.mri_ops.stg_procedures: Close
+[0m07:37:09.815330 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111dccf10>]}
+[0m07:37:09.815812 [info ] [Thread-1 (]: 3 of 9 OK created sql view model main.stg_procedures ........................... [[32mOK[0m in 0.03s]
+[0m07:37:09.816246 [debug] [Thread-1 (]: Finished running node model.mri_ops.stg_procedures
+[0m07:37:09.816552 [debug] [Thread-1 (]: Began running node model.mri_ops.stg_scanners
+[0m07:37:09.817024 [info ] [Thread-1 (]: 4 of 9 START sql view model main.stg_scanners .................................. [RUN]
+[0m07:37:09.817401 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.stg_procedures, now model.mri_ops.stg_scanners)
+[0m07:37:09.817703 [debug] [Thread-1 (]: Began compiling node model.mri_ops.stg_scanners
+[0m07:37:09.820016 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.stg_scanners"
+[0m07:37:09.820624 [debug] [Thread-1 (]: Began executing node model.mri_ops.stg_scanners
+[0m07:37:09.823240 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.stg_scanners"
+[0m07:37:09.823805 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_scanners"
+[0m07:37:09.824074 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: BEGIN
+[0m07:37:09.824320 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:09.824982 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.825364 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_scanners"
+[0m07:37:09.825674 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_scanners"} */
+
+  
+  create view "mri_ops"."main"."stg_scanners__dbt_tmp" as (
+    with source as (
+    select * from read_csv_auto('../data/synthetic/scanners.csv')
+),
+
+renamed as (
+    select
+        scanner_id,
+        site,
+        field_strength,
+        status,
+        open_bore::boolean    as open_bore,
+        delay_bias_min::float as delay_bias_min
+    from source
+)
+
+select * from renamed
+  );
+
+[0m07:37:09.829143 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:37:09.831804 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_scanners"
+[0m07:37:09.832138 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_scanners"} */
+alter view "mri_ops"."main"."stg_scanners__dbt_tmp" rename to "stg_scanners"
+[0m07:37:09.832751 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.833654 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: COMMIT
+[0m07:37:09.833914 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_scanners"
+[0m07:37:09.834146 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: COMMIT
+[0m07:37:09.834842 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.836901 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.stg_scanners"
+[0m07:37:09.837174 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.stg_scanners"} */
+
+      drop view if exists "mri_ops"."main"."stg_scanners__dbt_backup" cascade
+    
+[0m07:37:09.837819 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:09.838983 [debug] [Thread-1 (]: On model.mri_ops.stg_scanners: Close
+[0m07:37:09.839412 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111dc5dd0>]}
+[0m07:37:09.839854 [info ] [Thread-1 (]: 4 of 9 OK created sql view model main.stg_scanners ............................. [[32mOK[0m in 0.02s]
+[0m07:37:09.840233 [debug] [Thread-1 (]: Finished running node model.mri_ops.stg_scanners
+[0m07:37:09.840506 [debug] [Thread-1 (]: Began running node model.mri_ops.int_exam_durations
+[0m07:37:09.841011 [info ] [Thread-1 (]: 5 of 9 START sql view model main.int_exam_durations ............................ [RUN]
+[0m07:37:09.841474 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.stg_scanners, now model.mri_ops.int_exam_durations)
+[0m07:37:09.841777 [debug] [Thread-1 (]: Began compiling node model.mri_ops.int_exam_durations
+[0m07:37:09.844633 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.int_exam_durations"
+[0m07:37:09.845339 [debug] [Thread-1 (]: Began executing node model.mri_ops.int_exam_durations
+[0m07:37:09.848227 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.int_exam_durations"
+[0m07:37:09.849051 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_exam_durations"
+[0m07:37:09.849423 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: BEGIN
+[0m07:37:09.849854 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:09.850439 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:09.850704 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_exam_durations"
+[0m07:37:09.851013 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.int_exam_durations"} */
+
+  
+  create view "mri_ops"."main"."int_exam_durations__dbt_tmp" as (
+    with appointments as (
+    select * from "mri_ops"."main"."stg_appointments"
+),
+
+exam_logs as (
+    select * from "mri_ops"."main"."stg_exam_logs"
+),
+
+procedures as (
+    select * from "mri_ops"."main"."stg_procedures"
+),
+
+joined as (
+    select
+        a.appointment_id,
+        a.patient_id,
+        a.procedure_code,
+        a.scanner_id,
+        a.site,
+        a.scheduled_start,
+        a.scheduled_end,
+        a.template_duration_min,
+        a.day_of_week,
+        a.hour_of_day,
+        a.is_contrast,
+        a.complexity,
+
+        l.actual_start,
+        l.actual_end,
+        l.actual_duration_min,
+        l.start_delay_min,
+        l.end_delta_min,
+        l.adherent,
+        l.delay_reason,
+        l.technologist_id,
+
+        -- Derived fields
+        p.procedure_name,
+        l.actual_duration_min - a.template_duration_min as duration_variance_min,
+        case
+            when l.actual_duration_min > a.template_duration_min then 'over'
+            when l.actual_duration_min < a.template_duration_min then 'under'
+            else 'on_template'
+        end as duration_vs_template,
+
+        date_trunc('day', a.scheduled_start) as exam_date,
+        date_part('week', a.scheduled_start) as exam_week,
+        date_part('month', a.scheduled_start) as exam_month,
+        date_part('year', a.scheduled_start) as exam_year
+
+    from appointments a
+    inner join exam_logs l on a.appointment_id = l.appointment_id
+    inner join procedures p on a.procedure_code = p.procedure_code
+)
+
+select * from joined
+  );
+
+[0m07:37:10.151509 [debug] [Thread-1 (]: SQL status: OK in 0.300 seconds
+[0m07:37:10.154045 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_exam_durations"
+[0m07:37:10.154329 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.int_exam_durations"} */
+alter view "mri_ops"."main"."int_exam_durations__dbt_tmp" rename to "int_exam_durations"
+[0m07:37:10.154865 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:10.155823 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: COMMIT
+[0m07:37:10.156078 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_exam_durations"
+[0m07:37:10.156313 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: COMMIT
+[0m07:37:10.157074 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:10.159785 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_exam_durations"
+[0m07:37:10.160066 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.int_exam_durations"} */
+
+      drop view if exists "mri_ops"."main"."int_exam_durations__dbt_backup" cascade
+    
+[0m07:37:10.160541 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:10.161441 [debug] [Thread-1 (]: On model.mri_ops.int_exam_durations: Close
+[0m07:37:10.161855 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e228d0>]}
+[0m07:37:10.162291 [info ] [Thread-1 (]: 5 of 9 OK created sql view model main.int_exam_durations ....................... [[32mOK[0m in 0.32s]
+[0m07:37:10.162696 [debug] [Thread-1 (]: Finished running node model.mri_ops.int_exam_durations
+[0m07:37:10.163293 [debug] [Thread-1 (]: Began running node model.mri_ops.int_schedule_adherence
+[0m07:37:10.163653 [info ] [Thread-1 (]: 6 of 9 START sql view model main.int_schedule_adherence ........................ [RUN]
+[0m07:37:10.163963 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.int_exam_durations, now model.mri_ops.int_schedule_adherence)
+[0m07:37:10.164222 [debug] [Thread-1 (]: Began compiling node model.mri_ops.int_schedule_adherence
+[0m07:37:10.166434 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.166974 [debug] [Thread-1 (]: Began executing node model.mri_ops.int_schedule_adherence
+[0m07:37:10.169578 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.170407 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.170684 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: BEGIN
+[0m07:37:10.170927 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:10.171437 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:10.171680 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.171970 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.int_schedule_adherence"} */
+
+  
+  create view "mri_ops"."main"."int_schedule_adherence__dbt_tmp" as (
+    with exam_durations as (
+    select * from "mri_ops"."main"."int_exam_durations"
+),
+
+scanners as (
+    select * from "mri_ops"."main"."stg_scanners"
+),
+
+final as (
+    select
+        e.appointment_id,
+        e.procedure_code,
+        e.procedure_name,
+        e.scanner_id,
+        s.site,
+        s.field_strength,
+        e.exam_date,
+        e.day_of_week,
+        e.hour_of_day,
+        e.complexity,
+        e.is_contrast,
+        e.template_duration_min,
+        e.actual_duration_min,
+        e.start_delay_min,
+        e.end_delta_min,
+        e.adherent,
+        e.delay_reason,
+        e.duration_variance_min,
+        e.duration_vs_template,
+
+        -- Risk buckets for dashboard
+        case
+            when e.start_delay_min >= 15 then 'high'
+            when e.start_delay_min >= 5  then 'medium'
+            else 'low'
+        end as start_delay_risk,
+
+        case
+            when abs(e.end_delta_min) <= 5  then 'on_time'
+            when abs(e.end_delta_min) <= 10 then 'near_miss'
+            when e.end_delta_min > 10       then 'late'
+            else 'early'
+        end as adherence_category
+
+    from exam_durations e
+    inner join scanners s on e.scanner_id = s.scanner_id
+)
+
+select * from final
+  );
+
+[0m07:37:10.458725 [debug] [Thread-1 (]: SQL status: OK in 0.286 seconds
+[0m07:37:10.461665 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.462044 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.int_schedule_adherence"} */
+alter view "mri_ops"."main"."int_schedule_adherence__dbt_tmp" rename to "int_schedule_adherence"
+[0m07:37:10.462658 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:10.463600 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: COMMIT
+[0m07:37:10.463863 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.464102 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: COMMIT
+[0m07:37:10.464938 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:10.466680 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.int_schedule_adherence"
+[0m07:37:10.466959 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.int_schedule_adherence"} */
+
+      drop view if exists "mri_ops"."main"."int_schedule_adherence__dbt_backup" cascade
+    
+[0m07:37:10.467382 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:10.468207 [debug] [Thread-1 (]: On model.mri_ops.int_schedule_adherence: Close
+[0m07:37:10.468629 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e21190>]}
+[0m07:37:10.469064 [info ] [Thread-1 (]: 6 of 9 OK created sql view model main.int_schedule_adherence ................... [[32mOK[0m in 0.30s]
+[0m07:37:10.469447 [debug] [Thread-1 (]: Finished running node model.mri_ops.int_schedule_adherence
+[0m07:37:10.470063 [debug] [Thread-1 (]: Began running node model.mri_ops.mart_daily_scanner_performance
+[0m07:37:10.470572 [info ] [Thread-1 (]: 7 of 9 START sql table model main.mart_daily_scanner_performance ............... [RUN]
+[0m07:37:10.470978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.int_schedule_adherence, now model.mri_ops.mart_daily_scanner_performance)
+[0m07:37:10.471260 [debug] [Thread-1 (]: Began compiling node model.mri_ops.mart_daily_scanner_performance
+[0m07:37:10.473532 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.474173 [debug] [Thread-1 (]: Began executing node model.mri_ops.mart_daily_scanner_performance
+[0m07:37:10.488793 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.489548 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.489820 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: BEGIN
+[0m07:37:10.490074 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:10.490606 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:10.490859 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.491374 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_daily_scanner_performance"} */
+
+  
+    
+    
+
+    create  table
+      "mri_ops"."main"."mart_daily_scanner_performance__dbt_tmp"
+  
+    as (
+      with adherence as (
+    select * from "mri_ops"."main"."int_schedule_adherence"
+),
+
+daily_stats as (
+    select
+        exam_date,
+        scanner_id,
+        site,
+        field_strength,
+        count(*)                                          as total_exams,
+        sum(case when adherent then 1 else 0 end)         as adherent_exams,
+        round(avg(case when adherent then 1.0 else 0.0 end) * 100, 1) as adherence_rate_pct,
+        round(avg(actual_duration_min), 1)                as avg_actual_duration_min,
+        round(avg(template_duration_min), 1)              as avg_template_duration_min,
+        round(avg(start_delay_min), 1)                    as avg_start_delay_min,
+        round(avg(end_delta_min), 1)                      as avg_end_delta_min,
+        round(stddev(actual_duration_min), 1)             as stddev_duration_min,
+        round(max(start_delay_min), 1)                    as max_start_delay_min,
+        round(max(end_delta_min), 1)                      as max_end_delta_min,
+        count(case when delay_reason = 'equipment_issue' then 1 end) as equipment_issues,
+        count(case when delay_reason = 'patient_late' then 1 end)    as patient_late_count,
+        count(case when start_delay_risk = 'high' then 1 end)        as high_delay_risk_count
+    from adherence
+    group by exam_date, scanner_id, site, field_strength
+)
+
+select * from daily_stats
+order by exam_date desc, scanner_id
+    );
+  
+  
+[0m07:37:10.902536 [debug] [Thread-1 (]: SQL status: OK in 0.411 seconds
+[0m07:37:10.905219 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.905505 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_daily_scanner_performance"} */
+alter table "mri_ops"."main"."mart_daily_scanner_performance__dbt_tmp" rename to "mart_daily_scanner_performance"
+[0m07:37:10.906800 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:10.910381 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: COMMIT
+[0m07:37:10.910732 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.910991 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: COMMIT
+[0m07:37:10.913786 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:37:10.915594 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_daily_scanner_performance"
+[0m07:37:10.915872 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_daily_scanner_performance"} */
+
+      drop table if exists "mri_ops"."main"."mart_daily_scanner_performance__dbt_backup" cascade
+    
+[0m07:37:10.916504 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:10.917369 [debug] [Thread-1 (]: On model.mri_ops.mart_daily_scanner_performance: Close
+[0m07:37:10.917789 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ddad10>]}
+[0m07:37:10.918231 [info ] [Thread-1 (]: 7 of 9 OK created sql table model main.mart_daily_scanner_performance .......... [[32mOK[0m in 0.45s]
+[0m07:37:10.918939 [debug] [Thread-1 (]: Finished running node model.mri_ops.mart_daily_scanner_performance
+[0m07:37:10.919280 [debug] [Thread-1 (]: Began running node model.mri_ops.mart_ml_features
+[0m07:37:10.919745 [info ] [Thread-1 (]: 8 of 9 START sql table model main.mart_ml_features ............................. [RUN]
+[0m07:37:10.920149 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.mart_daily_scanner_performance, now model.mri_ops.mart_ml_features)
+[0m07:37:10.920430 [debug] [Thread-1 (]: Began compiling node model.mri_ops.mart_ml_features
+[0m07:37:10.922671 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.mart_ml_features"
+[0m07:37:10.923272 [debug] [Thread-1 (]: Began executing node model.mri_ops.mart_ml_features
+[0m07:37:10.927185 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.mart_ml_features"
+[0m07:37:10.927753 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_ml_features"
+[0m07:37:10.928010 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: BEGIN
+[0m07:37:10.928238 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:10.928875 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:10.929253 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_ml_features"
+[0m07:37:10.929566 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_ml_features"} */
+
+  
+    
+    
+
+    create  table
+      "mri_ops"."main"."mart_ml_features__dbt_tmp"
+  
+    as (
+      -- Feature table for ML model training and inference
+-- One row per exam with all features needed for duration prediction
+-- and schedule adherence classification
+
+with adherence as (
+    select * from "mri_ops"."main"."int_schedule_adherence"
+),
+
+features as (
+    select
+        -- Keys
+        appointment_id,
+        exam_date,
+
+        -- Target variables
+        actual_duration_min,
+        adherent,
+
+        -- Procedure features
+        procedure_code,
+        complexity,
+        is_contrast,
+        template_duration_min,
+
+        -- Time features
+        day_of_week,
+        hour_of_day,
+        case day_of_week
+            when 'Monday'    then 1
+            when 'Tuesday'   then 2
+            when 'Wednesday' then 3
+            when 'Thursday'  then 4
+            when 'Friday'    then 5
+        end as day_of_week_num,
+        case
+            when hour_of_day between 7  and 9  then 'early_am'
+            when hour_of_day between 10 and 12 then 'mid_am'
+            when hour_of_day between 13 and 15 then 'early_pm'
+            when hour_of_day between 16 and 19 then 'late_pm'
+        end as time_bucket,
+
+        -- Scanner features
+        scanner_id,
+        site,
+        field_strength,
+
+        -- Delay context
+        start_delay_min,
+        delay_reason,
+        start_delay_risk
+
+    from adherence
+)
+
+select * from features
+    );
+  
+  
+[0m07:37:11.347736 [debug] [Thread-1 (]: SQL status: OK in 0.418 seconds
+[0m07:37:11.350274 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_ml_features"
+[0m07:37:11.350555 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_ml_features"} */
+alter table "mri_ops"."main"."mart_ml_features__dbt_tmp" rename to "mart_ml_features"
+[0m07:37:11.351165 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:11.352146 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: COMMIT
+[0m07:37:11.352404 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_ml_features"
+[0m07:37:11.352646 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: COMMIT
+[0m07:37:11.371591 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m07:37:11.373497 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_ml_features"
+[0m07:37:11.373780 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_ml_features"} */
+
+      drop table if exists "mri_ops"."main"."mart_ml_features__dbt_backup" cascade
+    
+[0m07:37:11.374283 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:11.375147 [debug] [Thread-1 (]: On model.mri_ops.mart_ml_features: Close
+[0m07:37:11.375550 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e97d10>]}
+[0m07:37:11.375986 [info ] [Thread-1 (]: 8 of 9 OK created sql table model main.mart_ml_features ........................ [[32mOK[0m in 0.46s]
+[0m07:37:11.376381 [debug] [Thread-1 (]: Finished running node model.mri_ops.mart_ml_features
+[0m07:37:11.376655 [debug] [Thread-1 (]: Began running node model.mri_ops.mart_procedure_variability
+[0m07:37:11.376952 [info ] [Thread-1 (]: 9 of 9 START sql table model main.mart_procedure_variability ................... [RUN]
+[0m07:37:11.377252 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.mri_ops.mart_ml_features, now model.mri_ops.mart_procedure_variability)
+[0m07:37:11.377497 [debug] [Thread-1 (]: Began compiling node model.mri_ops.mart_procedure_variability
+[0m07:37:11.379560 [debug] [Thread-1 (]: Writing injected SQL for node "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.380214 [debug] [Thread-1 (]: Began executing node model.mri_ops.mart_procedure_variability
+[0m07:37:11.382954 [debug] [Thread-1 (]: Writing runtime sql for node "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.383771 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.384048 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: BEGIN
+[0m07:37:11.384288 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:11.384810 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:11.385059 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.385368 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_procedure_variability"} */
+
+  
+    
+    
+
+    create  table
+      "mri_ops"."main"."mart_procedure_variability__dbt_tmp"
+  
+    as (
+      with adherence as (
+    select * from "mri_ops"."main"."int_schedule_adherence"
+),
+
+procedure_stats as (
+    select
+        procedure_code,
+        procedure_name,
+        complexity,
+        is_contrast,
+        count(*)                                                      as total_exams,
+        round(avg(template_duration_min), 1)                          as template_duration_min,
+        round(avg(actual_duration_min), 1)                            as avg_actual_duration_min,
+        round(stddev(actual_duration_min), 1)                         as stddev_duration_min,
+        round(avg(actual_duration_min) - avg(template_duration_min), 1) as avg_duration_variance_min,
+        round(avg(case when adherent then 1.0 else 0.0 end) * 100, 1) as adherence_rate_pct,
+        round(avg(start_delay_min), 1)                                as avg_start_delay_min,
+        round(avg(end_delta_min), 1)                                  as avg_end_delta_min,
+        -- p90 actual duration
+        round(percentile_cont(0.90) within group (order by actual_duration_min), 1) as p90_duration_min,
+        -- p90 end delta (how late do the worst exams run?)
+        round(percentile_cont(0.90) within group (order by end_delta_min), 1)       as p90_end_delta_min,
+        count(case when duration_vs_template = 'over' then 1 end)     as exams_over_template,
+        count(case when duration_vs_template = 'under' then 1 end)    as exams_under_template
+    from adherence
+    group by procedure_code, procedure_name, complexity, is_contrast
+)
+
+select * from procedure_stats
+order by avg_duration_variance_min desc
+    );
+  
+  
+[0m07:37:11.748088 [debug] [Thread-1 (]: SQL status: OK in 0.362 seconds
+[0m07:37:11.750871 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.751247 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_procedure_variability"} */
+alter table "mri_ops"."main"."mart_procedure_variability__dbt_tmp" rename to "mart_procedure_variability"
+[0m07:37:11.751864 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:11.752908 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: COMMIT
+[0m07:37:11.753176 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.753420 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: COMMIT
+[0m07:37:11.754148 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:11.755852 [debug] [Thread-1 (]: Using duckdb connection "model.mri_ops.mart_procedure_variability"
+[0m07:37:11.756120 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "model.mri_ops.mart_procedure_variability"} */
+
+      drop table if exists "mri_ops"."main"."mart_procedure_variability__dbt_backup" cascade
+    
+[0m07:37:11.756593 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m07:37:11.757678 [debug] [Thread-1 (]: On model.mri_ops.mart_procedure_variability: Close
+[0m07:37:11.758203 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '590b1b32-33e4-453b-aac9-53028a2e9ccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111dcec50>]}
+[0m07:37:11.758697 [info ] [Thread-1 (]: 9 of 9 OK created sql table model main.mart_procedure_variability .............. [[32mOK[0m in 0.38s]
+[0m07:37:11.759121 [debug] [Thread-1 (]: Finished running node model.mri_ops.mart_procedure_variability
+[0m07:37:11.759959 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:11.760236 [debug] [MainThread]: On master: BEGIN
+[0m07:37:11.760454 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m07:37:11.760960 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:11.761195 [debug] [MainThread]: On master: COMMIT
+[0m07:37:11.761409 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:11.761607 [debug] [MainThread]: On master: COMMIT
+[0m07:37:11.761955 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:11.762207 [debug] [MainThread]: On master: Close
+[0m07:37:11.762484 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:37:11.762682 [debug] [MainThread]: Connection 'model.mri_ops.mart_procedure_variability' was properly closed.
+[0m07:37:11.762866 [debug] [MainThread]: Connection 'list_mri_ops_main' was properly closed.
+[0m07:37:11.763150 [info ] [MainThread]: 
+[0m07:37:11.764544 [info ] [MainThread]: Finished running 3 table models, 6 view models in 0 hours 0 minutes and 2.50 seconds (2.50s).
+[0m07:37:11.765846 [debug] [MainThread]: Command end result
+[0m07:37:11.798707 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/manifest.json
+[0m07:37:11.800322 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/semantic_manifest.json
+[0m07:37:11.804678 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/run_results.json
+[0m07:37:11.804925 [info ] [MainThread]: 
+[0m07:37:11.805233 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:37:11.805488 [info ] [MainThread]: 
+[0m07:37:11.805753 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=9
+[0m07:37:11.809211 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.6666946, "process_in_blocks": "0", "process_kernel_time": 0.451879, "process_mem_max_rss": "236548096", "process_out_blocks": "0", "process_user_time": 4.517736}
+[0m07:37:11.809767 [debug] [MainThread]: Command `dbt run` succeeded at 07:37:11.809697 after 3.67 seconds
+[0m07:37:11.810088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fcb350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fc9b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aef1890>]}
+[0m07:37:11.810394 [debug] [MainThread]: Flushing usage events
+[0m07:37:12.567867 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:37:50.966891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fe3490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e1bd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111173610>]}
+
+
+============================== 07:37:50.972939 | 8ebcea74-2bf2-4d50-a1dc-81ebe0995936 ==============================
+[0m07:37:50.972939 [info ] [MainThread]: Running with dbt=1.11.11
+[0m07:37:50.973493 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'partial_parse': 'True', 'log_path': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/logs', 'static_parser': 'True', 'invocation_command': 'dbt test', 'empty': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'warn_error': 'None', 'use_colors': 'True', 'introspect': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'profiles_dir': '/Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt'}
+[0m07:37:51.278433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8ebcea74-2bf2-4d50-a1dc-81ebe0995936', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111096310>]}
+[0m07:37:51.324039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8ebcea74-2bf2-4d50-a1dc-81ebe0995936', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110217f90>]}
+[0m07:37:51.326369 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m07:37:51.438877 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m07:37:51.536820 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m07:37:51.537264 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m07:37:51.537552 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m07:37:51.577765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8ebcea74-2bf2-4d50-a1dc-81ebe0995936', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11153f2d0>]}
+[0m07:37:51.748376 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/manifest.json
+[0m07:37:51.750789 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/semantic_manifest.json
+[0m07:37:51.776239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8ebcea74-2bf2-4d50-a1dc-81ebe0995936', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111880650>]}
+[0m07:37:51.776788 [info ] [MainThread]: Found 9 models, 16 data tests, 485 macros
+[0m07:37:51.777088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ebcea74-2bf2-4d50-a1dc-81ebe0995936', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111248350>]}
+[0m07:37:51.779177 [info ] [MainThread]: 
+[0m07:37:51.779472 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m07:37:51.779709 [info ] [MainThread]: 
+[0m07:37:51.780118 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m07:37:51.787127 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_mri_ops_main'
+[0m07:37:51.853625 [debug] [ThreadPool]: Using duckdb connection "list_mri_ops_main"
+[0m07:37:51.854470 [debug] [ThreadPool]: On list_mri_ops_main: BEGIN
+[0m07:37:51.855495 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:37:51.925181 [debug] [ThreadPool]: SQL status: OK in 0.070 seconds
+[0m07:37:51.926072 [debug] [ThreadPool]: Using duckdb connection "list_mri_ops_main"
+[0m07:37:51.926396 [debug] [ThreadPool]: On list_mri_ops_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "connection_name": "list_mri_ops_main"} */
+select
+      'mri_ops' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'mri_ops'
+  
+[0m07:37:52.233246 [debug] [ThreadPool]: SQL status: OK in 0.306 seconds
+[0m07:37:52.245357 [debug] [ThreadPool]: On list_mri_ops_main: ROLLBACK
+[0m07:37:52.249031 [debug] [ThreadPool]: Failed to rollback 'list_mri_ops_main'
+[0m07:37:52.250964 [debug] [ThreadPool]: On list_mri_ops_main: Close
+[0m07:37:52.253564 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8ebcea74-2bf2-4d50-a1dc-81ebe0995936', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbd8690>]}
+[0m07:37:52.254151 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:52.254403 [debug] [MainThread]: On master: BEGIN
+[0m07:37:52.254620 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m07:37:52.255253 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m07:37:52.255489 [debug] [MainThread]: On master: COMMIT
+[0m07:37:52.255788 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:52.256021 [debug] [MainThread]: On master: COMMIT
+[0m07:37:52.256468 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:52.256718 [debug] [MainThread]: On master: Close
+[0m07:37:52.260470 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9
+[0m07:37:52.260842 [info ] [Thread-1 (]: 1 of 16 START test not_null_stg_appointments_appointment_id .................... [RUN]
+[0m07:37:52.261219 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_mri_ops_main, now test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9)
+[0m07:37:52.261508 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9
+[0m07:37:52.281457 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9"
+[0m07:37:52.282669 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9
+[0m07:37:52.296121 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9"
+[0m07:37:52.297125 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9"
+[0m07:37:52.297437 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9: BEGIN
+[0m07:37:52.297697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:52.298912 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:52.299205 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9"
+[0m07:37:52.299481 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select appointment_id
+from "mri_ops"."main"."stg_appointments"
+where appointment_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:52.505072 [debug] [Thread-1 (]: SQL status: OK in 0.205 seconds
+[0m07:37:52.509836 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9: ROLLBACK
+[0m07:37:52.510395 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9'
+[0m07:37:52.510686 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9: Close
+[0m07:37:52.511921 [info ] [Thread-1 (]: 1 of 16 PASS not_null_stg_appointments_appointment_id .......................... [[32mPASS[0m in 0.25s]
+[0m07:37:52.512412 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9
+[0m07:37:52.512726 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_appointments_patient_id.58b8041466
+[0m07:37:52.512999 [info ] [Thread-1 (]: 2 of 16 START test not_null_stg_appointments_patient_id ........................ [RUN]
+[0m07:37:52.513464 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_appointments_appointment_id.1bc4bcccf9, now test.mri_ops.not_null_stg_appointments_patient_id.58b8041466)
+[0m07:37:52.513820 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_appointments_patient_id.58b8041466
+[0m07:37:52.517566 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_appointments_patient_id.58b8041466"
+[0m07:37:52.518175 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_appointments_patient_id.58b8041466
+[0m07:37:52.520319 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_appointments_patient_id.58b8041466"
+[0m07:37:52.521701 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_patient_id.58b8041466"
+[0m07:37:52.522049 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_patient_id.58b8041466: BEGIN
+[0m07:37:52.522348 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:52.523380 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:52.524732 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_patient_id.58b8041466"
+[0m07:37:52.525325 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_patient_id.58b8041466: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_appointments_patient_id.58b8041466"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select patient_id
+from "mri_ops"."main"."stg_appointments"
+where patient_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:52.931838 [debug] [Thread-1 (]: SQL status: OK in 0.401 seconds
+[0m07:37:52.941552 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_patient_id.58b8041466: ROLLBACK
+[0m07:37:52.942616 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_appointments_patient_id.58b8041466'
+[0m07:37:52.943300 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_patient_id.58b8041466: Close
+[0m07:37:52.947087 [info ] [Thread-1 (]: 2 of 16 PASS not_null_stg_appointments_patient_id .............................. [[32mPASS[0m in 0.43s]
+[0m07:37:52.950535 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_appointments_patient_id.58b8041466
+[0m07:37:52.951523 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb
+[0m07:37:52.952425 [info ] [Thread-1 (]: 3 of 16 START test not_null_stg_appointments_procedure_code .................... [RUN]
+[0m07:37:52.953248 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_appointments_patient_id.58b8041466, now test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb)
+[0m07:37:52.954284 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb
+[0m07:37:52.979163 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb"
+[0m07:37:52.982650 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb
+[0m07:37:52.985855 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb"
+[0m07:37:52.987391 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb"
+[0m07:37:52.988149 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb: BEGIN
+[0m07:37:52.988884 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:52.990245 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:52.990596 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb"
+[0m07:37:52.990896 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select procedure_code
+from "mri_ops"."main"."stg_appointments"
+where procedure_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:53.184758 [debug] [Thread-1 (]: SQL status: OK in 0.193 seconds
+[0m07:37:53.186362 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb: ROLLBACK
+[0m07:37:53.186827 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb'
+[0m07:37:53.187102 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb: Close
+[0m07:37:53.187587 [info ] [Thread-1 (]: 3 of 16 PASS not_null_stg_appointments_procedure_code .......................... [[32mPASS[0m in 0.23s]
+[0m07:37:53.188014 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb
+[0m07:37:53.188354 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41
+[0m07:37:53.188665 [info ] [Thread-1 (]: 4 of 16 START test not_null_stg_appointments_scanner_id ........................ [RUN]
+[0m07:37:53.188966 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_appointments_procedure_code.f98de028fb, now test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41)
+[0m07:37:53.189226 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41
+[0m07:37:53.192305 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41"
+[0m07:37:53.192891 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41
+[0m07:37:53.195062 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41"
+[0m07:37:53.195731 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41"
+[0m07:37:53.195998 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41: BEGIN
+[0m07:37:53.196240 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:53.196820 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:53.197069 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41"
+[0m07:37:53.197332 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select scanner_id
+from "mri_ops"."main"."stg_appointments"
+where scanner_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:53.377588 [debug] [Thread-1 (]: SQL status: OK in 0.180 seconds
+[0m07:37:53.379267 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41: ROLLBACK
+[0m07:37:53.379736 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41'
+[0m07:37:53.380140 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41: Close
+[0m07:37:53.380788 [info ] [Thread-1 (]: 4 of 16 PASS not_null_stg_appointments_scanner_id .............................. [[32mPASS[0m in 0.19s]
+[0m07:37:53.381230 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41
+[0m07:37:53.381567 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6
+[0m07:37:53.381871 [info ] [Thread-1 (]: 5 of 16 START test not_null_stg_appointments_scheduled_start ................... [RUN]
+[0m07:37:53.382395 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_appointments_scanner_id.2d79576c41, now test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6)
+[0m07:37:53.382711 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6
+[0m07:37:53.386095 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6"
+[0m07:37:53.386672 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6
+[0m07:37:53.391219 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6"
+[0m07:37:53.392073 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6"
+[0m07:37:53.392373 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6: BEGIN
+[0m07:37:53.392715 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:53.393632 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:53.393950 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6"
+[0m07:37:53.394226 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select scheduled_start
+from "mri_ops"."main"."stg_appointments"
+where scheduled_start is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:53.576933 [debug] [Thread-1 (]: SQL status: OK in 0.182 seconds
+[0m07:37:53.578289 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6: ROLLBACK
+[0m07:37:53.578707 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6'
+[0m07:37:53.578964 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6: Close
+[0m07:37:53.579411 [info ] [Thread-1 (]: 5 of 16 PASS not_null_stg_appointments_scheduled_start ......................... [[32mPASS[0m in 0.20s]
+[0m07:37:53.579802 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6
+[0m07:37:53.580088 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b
+[0m07:37:53.580344 [info ] [Thread-1 (]: 6 of 16 START test not_null_stg_appointments_template_duration_min ............. [RUN]
+[0m07:37:53.580892 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_appointments_scheduled_start.6d4bd3ccf6, now test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b)
+[0m07:37:53.581436 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b
+[0m07:37:53.584831 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b"
+[0m07:37:53.585531 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b
+[0m07:37:53.588001 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b"
+[0m07:37:53.588687 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b"
+[0m07:37:53.588961 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b: BEGIN
+[0m07:37:53.589206 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:53.589825 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:53.590085 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b"
+[0m07:37:53.590343 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select template_duration_min
+from "mri_ops"."main"."stg_appointments"
+where template_duration_min is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:53.767347 [debug] [Thread-1 (]: SQL status: OK in 0.177 seconds
+[0m07:37:53.770046 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b: ROLLBACK
+[0m07:37:53.770506 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b'
+[0m07:37:53.770778 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b: Close
+[0m07:37:53.771247 [info ] [Thread-1 (]: 6 of 16 PASS not_null_stg_appointments_template_duration_min ................... [[32mPASS[0m in 0.19s]
+[0m07:37:53.771643 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b
+[0m07:37:53.771928 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a
+[0m07:37:53.772195 [info ] [Thread-1 (]: 7 of 16 START test not_null_stg_exam_logs_actual_duration_min .................. [RUN]
+[0m07:37:53.772680 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_appointments_template_duration_min.f91fc5732b, now test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a)
+[0m07:37:53.773133 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a
+[0m07:37:53.776633 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a"
+[0m07:37:53.777887 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a
+[0m07:37:53.780293 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a"
+[0m07:37:53.780887 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a"
+[0m07:37:53.781140 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a: BEGIN
+[0m07:37:53.781374 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:53.781997 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:53.782240 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a"
+[0m07:37:53.782493 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select actual_duration_min
+from "mri_ops"."main"."stg_exam_logs"
+where actual_duration_min is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:53.949853 [debug] [Thread-1 (]: SQL status: OK in 0.167 seconds
+[0m07:37:53.951627 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a: ROLLBACK
+[0m07:37:53.952070 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a'
+[0m07:37:53.952331 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a: Close
+[0m07:37:53.952789 [info ] [Thread-1 (]: 7 of 16 PASS not_null_stg_exam_logs_actual_duration_min ........................ [[32mPASS[0m in 0.18s]
+[0m07:37:53.953182 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a
+[0m07:37:53.953474 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384
+[0m07:37:53.953901 [info ] [Thread-1 (]: 8 of 16 START test not_null_stg_exam_logs_appointment_id ....................... [RUN]
+[0m07:37:53.954475 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_exam_logs_actual_duration_min.7d4643894a, now test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384)
+[0m07:37:53.954805 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384
+[0m07:37:53.958441 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384"
+[0m07:37:53.959251 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384
+[0m07:37:53.962261 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384"
+[0m07:37:53.962979 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384"
+[0m07:37:53.963271 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384: BEGIN
+[0m07:37:53.963534 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:53.964147 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:53.964399 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384"
+[0m07:37:53.964660 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select appointment_id
+from "mri_ops"."main"."stg_exam_logs"
+where appointment_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.125267 [debug] [Thread-1 (]: SQL status: OK in 0.160 seconds
+[0m07:37:54.126826 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384: ROLLBACK
+[0m07:37:54.127306 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384'
+[0m07:37:54.127584 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384: Close
+[0m07:37:54.128080 [info ] [Thread-1 (]: 8 of 16 PASS not_null_stg_exam_logs_appointment_id ............................. [[32mPASS[0m in 0.17s]
+[0m07:37:54.128561 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384
+[0m07:37:54.128888 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3
+[0m07:37:54.129219 [info ] [Thread-1 (]: 9 of 16 START test not_null_stg_exam_logs_log_id ............................... [RUN]
+[0m07:37:54.129548 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_exam_logs_appointment_id.32fc36c384, now test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3)
+[0m07:37:54.129816 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3
+[0m07:37:54.132999 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3"
+[0m07:37:54.133616 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3
+[0m07:37:54.135818 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3"
+[0m07:37:54.136434 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3"
+[0m07:37:54.136690 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3: BEGIN
+[0m07:37:54.136926 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.137501 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.137760 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3"
+[0m07:37:54.138014 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select log_id
+from "mri_ops"."main"."stg_exam_logs"
+where log_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.300645 [debug] [Thread-1 (]: SQL status: OK in 0.162 seconds
+[0m07:37:54.301960 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3: ROLLBACK
+[0m07:37:54.302369 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3'
+[0m07:37:54.302632 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3: Close
+[0m07:37:54.303074 [info ] [Thread-1 (]: 9 of 16 PASS not_null_stg_exam_logs_log_id ..................................... [[32mPASS[0m in 0.17s]
+[0m07:37:54.303476 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3
+[0m07:37:54.303773 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d
+[0m07:37:54.304044 [info ] [Thread-1 (]: 10 of 16 START test not_null_stg_procedures_procedure_code ..................... [RUN]
+[0m07:37:54.304603 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_exam_logs_log_id.a8d34832d3, now test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d)
+[0m07:37:54.305051 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d
+[0m07:37:54.308614 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d"
+[0m07:37:54.309331 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d
+[0m07:37:54.311381 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d"
+[0m07:37:54.311974 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d"
+[0m07:37:54.312244 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d: BEGIN
+[0m07:37:54.312503 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.313106 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.313359 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d"
+[0m07:37:54.313628 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select procedure_code
+from "mri_ops"."main"."stg_procedures"
+where procedure_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.317515 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m07:37:54.320450 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d: ROLLBACK
+[0m07:37:54.320951 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d'
+[0m07:37:54.321219 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d: Close
+[0m07:37:54.321677 [info ] [Thread-1 (]: 10 of 16 PASS not_null_stg_procedures_procedure_code ........................... [[32mPASS[0m in 0.02s]
+[0m07:37:54.322078 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d
+[0m07:37:54.322363 [debug] [Thread-1 (]: Began running node test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6
+[0m07:37:54.322845 [info ] [Thread-1 (]: 11 of 16 START test not_null_stg_scanners_scanner_id ........................... [RUN]
+[0m07:37:54.323171 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_procedures_procedure_code.5631a5294d, now test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6)
+[0m07:37:54.323434 [debug] [Thread-1 (]: Began compiling node test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6
+[0m07:37:54.326561 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6"
+[0m07:37:54.327370 [debug] [Thread-1 (]: Began executing node test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6
+[0m07:37:54.329497 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6"
+[0m07:37:54.330069 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6"
+[0m07:37:54.330347 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6: BEGIN
+[0m07:37:54.330598 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.331240 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.331500 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6"
+[0m07:37:54.331760 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select scanner_id
+from "mri_ops"."main"."stg_scanners"
+where scanner_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.336459 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m07:37:54.337858 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6: ROLLBACK
+[0m07:37:54.338327 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6'
+[0m07:37:54.338612 [debug] [Thread-1 (]: On test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6: Close
+[0m07:37:54.339108 [info ] [Thread-1 (]: 11 of 16 PASS not_null_stg_scanners_scanner_id ................................. [[32mPASS[0m in 0.02s]
+[0m07:37:54.339563 [debug] [Thread-1 (]: Finished running node test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6
+[0m07:37:54.339873 [debug] [Thread-1 (]: Began running node test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591
+[0m07:37:54.340386 [info ] [Thread-1 (]: 12 of 16 START test unique_stg_appointments_appointment_id ..................... [RUN]
+[0m07:37:54.341032 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.not_null_stg_scanners_scanner_id.8e402f3ac6, now test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591)
+[0m07:37:54.341380 [debug] [Thread-1 (]: Began compiling node test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591
+[0m07:37:54.346771 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591"
+[0m07:37:54.347421 [debug] [Thread-1 (]: Began executing node test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591
+[0m07:37:54.349332 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591"
+[0m07:37:54.349832 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591"
+[0m07:37:54.350115 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591: BEGIN
+[0m07:37:54.350817 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.351559 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.351877 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591"
+[0m07:37:54.352191 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    appointment_id as unique_field,
+    count(*) as n_records
+
+from "mri_ops"."main"."stg_appointments"
+where appointment_id is not null
+group by appointment_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.542846 [debug] [Thread-1 (]: SQL status: OK in 0.190 seconds
+[0m07:37:54.544322 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591: ROLLBACK
+[0m07:37:54.544800 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591'
+[0m07:37:54.545109 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591: Close
+[0m07:37:54.545619 [info ] [Thread-1 (]: 12 of 16 PASS unique_stg_appointments_appointment_id ........................... [[32mPASS[0m in 0.20s]
+[0m07:37:54.546049 [debug] [Thread-1 (]: Finished running node test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591
+[0m07:37:54.546357 [debug] [Thread-1 (]: Began running node test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9
+[0m07:37:54.546746 [info ] [Thread-1 (]: 13 of 16 START test unique_stg_exam_logs_appointment_id ........................ [RUN]
+[0m07:37:54.547456 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.unique_stg_appointments_appointment_id.6a4d61a591, now test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9)
+[0m07:37:54.547977 [debug] [Thread-1 (]: Began compiling node test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9
+[0m07:37:54.551417 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9"
+[0m07:37:54.552215 [debug] [Thread-1 (]: Began executing node test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9
+[0m07:37:54.554396 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9"
+[0m07:37:54.555015 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9"
+[0m07:37:54.555286 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9: BEGIN
+[0m07:37:54.555932 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.556679 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.557351 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9"
+[0m07:37:54.557641 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    appointment_id as unique_field,
+    count(*) as n_records
+
+from "mri_ops"."main"."stg_exam_logs"
+where appointment_id is not null
+group by appointment_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.725269 [debug] [Thread-1 (]: SQL status: OK in 0.167 seconds
+[0m07:37:54.726740 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9: ROLLBACK
+[0m07:37:54.727158 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9'
+[0m07:37:54.727529 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9: Close
+[0m07:37:54.727989 [info ] [Thread-1 (]: 13 of 16 PASS unique_stg_exam_logs_appointment_id .............................. [[32mPASS[0m in 0.18s]
+[0m07:37:54.728422 [debug] [Thread-1 (]: Finished running node test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9
+[0m07:37:54.728720 [debug] [Thread-1 (]: Began running node test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86
+[0m07:37:54.728992 [info ] [Thread-1 (]: 14 of 16 START test unique_stg_exam_logs_log_id ................................ [RUN]
+[0m07:37:54.729580 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.unique_stg_exam_logs_appointment_id.76c76193f9, now test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86)
+[0m07:37:54.729915 [debug] [Thread-1 (]: Began compiling node test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86
+[0m07:37:54.733121 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86"
+[0m07:37:54.733715 [debug] [Thread-1 (]: Began executing node test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86
+[0m07:37:54.736425 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86"
+[0m07:37:54.737117 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86"
+[0m07:37:54.737422 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86: BEGIN
+[0m07:37:54.737691 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.738328 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.738596 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86"
+[0m07:37:54.738874 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    log_id as unique_field,
+    count(*) as n_records
+
+from "mri_ops"."main"."stg_exam_logs"
+where log_id is not null
+group by log_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.936751 [debug] [Thread-1 (]: SQL status: OK in 0.197 seconds
+[0m07:37:54.938488 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86: ROLLBACK
+[0m07:37:54.938980 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86'
+[0m07:37:54.939254 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86: Close
+[0m07:37:54.940675 [info ] [Thread-1 (]: 14 of 16 PASS unique_stg_exam_logs_log_id ...................................... [[32mPASS[0m in 0.21s]
+[0m07:37:54.941542 [debug] [Thread-1 (]: Finished running node test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86
+[0m07:37:54.942008 [debug] [Thread-1 (]: Began running node test.mri_ops.unique_stg_procedures_procedure_code.c452001d71
+[0m07:37:54.942552 [info ] [Thread-1 (]: 15 of 16 START test unique_stg_procedures_procedure_code ....................... [RUN]
+[0m07:37:54.944030 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.unique_stg_exam_logs_log_id.c6df3bbe86, now test.mri_ops.unique_stg_procedures_procedure_code.c452001d71)
+[0m07:37:54.944458 [debug] [Thread-1 (]: Began compiling node test.mri_ops.unique_stg_procedures_procedure_code.c452001d71
+[0m07:37:54.948155 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.unique_stg_procedures_procedure_code.c452001d71"
+[0m07:37:54.949586 [debug] [Thread-1 (]: Began executing node test.mri_ops.unique_stg_procedures_procedure_code.c452001d71
+[0m07:37:54.951826 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.unique_stg_procedures_procedure_code.c452001d71"
+[0m07:37:54.952435 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_procedures_procedure_code.c452001d71"
+[0m07:37:54.952716 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_procedures_procedure_code.c452001d71: BEGIN
+[0m07:37:54.952956 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.953570 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.953825 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_procedures_procedure_code.c452001d71"
+[0m07:37:54.954095 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_procedures_procedure_code.c452001d71: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.unique_stg_procedures_procedure_code.c452001d71"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    procedure_code as unique_field,
+    count(*) as n_records
+
+from "mri_ops"."main"."stg_procedures"
+where procedure_code is not null
+group by procedure_code
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.958285 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m07:37:54.959738 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_procedures_procedure_code.c452001d71: ROLLBACK
+[0m07:37:54.960402 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.unique_stg_procedures_procedure_code.c452001d71'
+[0m07:37:54.960705 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_procedures_procedure_code.c452001d71: Close
+[0m07:37:54.961180 [info ] [Thread-1 (]: 15 of 16 PASS unique_stg_procedures_procedure_code ............................. [[32mPASS[0m in 0.02s]
+[0m07:37:54.961573 [debug] [Thread-1 (]: Finished running node test.mri_ops.unique_stg_procedures_procedure_code.c452001d71
+[0m07:37:54.961868 [debug] [Thread-1 (]: Began running node test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97
+[0m07:37:54.963164 [info ] [Thread-1 (]: 16 of 16 START test unique_stg_scanners_scanner_id ............................. [RUN]
+[0m07:37:54.963858 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.mri_ops.unique_stg_procedures_procedure_code.c452001d71, now test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97)
+[0m07:37:54.964470 [debug] [Thread-1 (]: Began compiling node test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97
+[0m07:37:54.970170 [debug] [Thread-1 (]: Writing injected SQL for node "test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97"
+[0m07:37:54.970874 [debug] [Thread-1 (]: Began executing node test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97
+[0m07:37:54.972873 [debug] [Thread-1 (]: Writing runtime sql for node "test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97"
+[0m07:37:54.973435 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97"
+[0m07:37:54.973695 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97: BEGIN
+[0m07:37:54.973946 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:37:54.974565 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m07:37:54.974832 [debug] [Thread-1 (]: Using duckdb connection "test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97"
+[0m07:37:54.975751 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "mri_ops", "target_name": "local", "node_id": "test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    scanner_id as unique_field,
+    count(*) as n_records
+
+from "mri_ops"."main"."stg_scanners"
+where scanner_id is not null
+group by scanner_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m07:37:54.979592 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m07:37:54.980875 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97: ROLLBACK
+[0m07:37:54.981278 [debug] [Thread-1 (]: Failed to rollback 'test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97'
+[0m07:37:54.981541 [debug] [Thread-1 (]: On test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97: Close
+[0m07:37:54.982417 [info ] [Thread-1 (]: 16 of 16 PASS unique_stg_scanners_scanner_id ................................... [[32mPASS[0m in 0.02s]
+[0m07:37:54.982982 [debug] [Thread-1 (]: Finished running node test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97
+[0m07:37:54.984818 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:54.985205 [debug] [MainThread]: On master: BEGIN
+[0m07:37:54.985496 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m07:37:54.986161 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m07:37:54.986413 [debug] [MainThread]: On master: COMMIT
+[0m07:37:54.986640 [debug] [MainThread]: Using duckdb connection "master"
+[0m07:37:54.986843 [debug] [MainThread]: On master: COMMIT
+[0m07:37:54.987160 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m07:37:54.987380 [debug] [MainThread]: On master: Close
+[0m07:37:54.987672 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:37:54.987879 [debug] [MainThread]: Connection 'test.mri_ops.unique_stg_scanners_scanner_id.e9e939ba97' was properly closed.
+[0m07:37:54.988191 [info ] [MainThread]: 
+[0m07:37:54.988563 [info ] [MainThread]: Finished running 16 data tests in 0 hours 0 minutes and 3.21 seconds (3.21s).
+[0m07:37:54.990720 [debug] [MainThread]: Command end result
+[0m07:37:55.022251 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/manifest.json
+[0m07:37:55.025790 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/semantic_manifest.json
+[0m07:37:55.033808 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/apple/Desktop/portfolio/mri_ops_platform/mri-ops-platform/dbt/target/run_results.json
+[0m07:37:55.034202 [info ] [MainThread]: 
+[0m07:37:55.034766 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:37:55.035072 [info ] [MainThread]: 
+[0m07:37:55.035370 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=16
+[0m07:37:55.040301 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.1618176, "process_in_blocks": "0", "process_kernel_time": 0.487087, "process_mem_max_rss": "156684288", "process_out_blocks": "0", "process_user_time": 4.218619}
+[0m07:37:55.040851 [debug] [MainThread]: Command `dbt test` succeeded at 07:37:55.040762 after 4.16 seconds
+[0m07:37:55.041344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fc8910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e1b590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b002990>]}
+[0m07:37:55.041926 [debug] [MainThread]: Flushing usage events
+[0m07:37:55.760064 [debug] [MainThread]: An error was encountered while trying to flush usage events

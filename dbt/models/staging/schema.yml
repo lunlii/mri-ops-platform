@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_appointments
+    description: "Cleaned and typed appointments data"
+    columns:
+      - name: appointment_id
+        description: "Unique appointment identifier"
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        tests:
+          - not_null
+      - name: procedure_code
+        tests:
+          - not_null
+      - name: scanner_id
+        tests:
+          - not_null
+      - name: scheduled_start
+        tests:
+          - not_null
+      - name: template_duration_min
+        tests:
+          - not_null
+
+  - name: stg_exam_logs
+    description: "Cleaned actual exam execution records"
+    columns:
+      - name: log_id
+        tests:
+          - unique
+          - not_null
+      - name: appointment_id
+        tests:
+          - unique
+          - not_null
+      - name: actual_duration_min
+        tests:
+          - not_null
+
+  - name: stg_procedures
+    description: "Procedure reference data with template durations"
+    columns:
+      - name: procedure_code
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_scanners
+    description: "Scanner inventory by site"
+    columns:
+      - name: scanner_id
+        tests:
+          - unique
+          - not_null
