@@ -1,3 +1,6 @@
 .venv311/
 data/synthetic/
 .DS_Store
+dbt/*.duckdb
+ml/artifacts/*.pkl
+dbt/.DS_Store
