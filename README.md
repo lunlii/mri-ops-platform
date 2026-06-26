@@ -190,7 +190,7 @@ Powered by Anthropic Claude (claude-sonnet-4-6).
 | Data generation | Python, Faker, NumPy |
 | Warehouse | DuckDB (local) → Snowflake (production) |
 | Transformation | dbt-core, dbt-duckdb / dbt-snowflake |
-| ML | scikit-learn, XGBoost, SHAP |
+| ML | scikit-learn, GradientBoosting, SHAP |
 | App | Streamlit, Plotly |
 | LLM | Anthropic Claude API |
 
