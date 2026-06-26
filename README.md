@@ -12,7 +12,7 @@ Hospital MRI departments run complex schedules across multiple scanners, procedu
 - Which scanners are underperforming?
 - Will this exam finish on time?
 
-This platform answers those questions using a governed analytics layer, two production-grade ML models, and an LLM assistant that lets operations staff ask questions in plain English.
+This platform answers those questions using a governed analytics layer, two applied ML workflows, and an LLM assistant that lets operations staff ask questions in plain English.
 
 ---
 
