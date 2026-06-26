@@ -4,3 +4,4 @@ data/synthetic/
 dbt/*.duckdb
 ml/artifacts/*.pkl
 dbt/.DS_Store
+.env
