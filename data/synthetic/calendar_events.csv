@@ -1,0 +1,81 @@
+date,event_type,description,affects_scheduling,scanner_id
+2023-01-02,holiday,Federal Holiday,True,
+2023-01-16,holiday,Federal Holiday,True,
+2023-02-20,holiday,Federal Holiday,True,
+2023-05-29,holiday,Federal Holiday,True,
+2023-07-04,holiday,Federal Holiday,True,
+2023-09-04,holiday,Federal Holiday,True,
+2023-11-23,holiday,Federal Holiday,True,
+2023-12-25,holiday,Federal Holiday,True,
+2024-01-01,holiday,Federal Holiday,True,
+2024-01-15,holiday,Federal Holiday,True,
+2024-02-19,holiday,Federal Holiday,True,
+2024-05-27,holiday,Federal Holiday,True,
+2024-07-04,holiday,Federal Holiday,True,
+2024-09-02,holiday,Federal Holiday,True,
+2024-11-28,holiday,Federal Holiday,True,
+2024-12-25,holiday,Federal Holiday,True,
+2023-03-19,maintenance,Scheduled maintenance - SC01,True,SC01
+2023-04-12,maintenance,Scheduled maintenance - SC01,True,SC01
+2023-09-14,maintenance,Scheduled maintenance - SC01,True,SC01
+2023-10-15,maintenance,Scheduled maintenance - SC01,True,SC01
+2024-01-11,maintenance,Scheduled maintenance - SC01,True,SC01
+2024-06-10,maintenance,Scheduled maintenance - SC01,True,SC01
+2024-07-19,maintenance,Scheduled maintenance - SC01,True,SC01
+2024-12-10,maintenance,Scheduled maintenance - SC01,True,SC01
+2023-03-01,maintenance,Scheduled maintenance - SC02,True,SC02
+2023-05-28,maintenance,Scheduled maintenance - SC02,True,SC02
+2023-07-18,maintenance,Scheduled maintenance - SC02,True,SC02
+2023-12-04,maintenance,Scheduled maintenance - SC02,True,SC02
+2024-03-18,maintenance,Scheduled maintenance - SC02,True,SC02
+2024-05-08,maintenance,Scheduled maintenance - SC02,True,SC02
+2024-08-20,maintenance,Scheduled maintenance - SC02,True,SC02
+2024-11-07,maintenance,Scheduled maintenance - SC02,True,SC02
+2023-03-21,maintenance,Scheduled maintenance - SC03,True,SC03
+2023-04-16,maintenance,Scheduled maintenance - SC03,True,SC03
+2023-09-08,maintenance,Scheduled maintenance - SC03,True,SC03
+2023-10-08,maintenance,Scheduled maintenance - SC03,True,SC03
+2024-01-20,maintenance,Scheduled maintenance - SC03,True,SC03
+2024-06-04,maintenance,Scheduled maintenance - SC03,True,SC03
+2024-07-28,maintenance,Scheduled maintenance - SC03,True,SC03
+2024-10-29,maintenance,Scheduled maintenance - SC03,True,SC03
+2023-02-25,maintenance,Scheduled maintenance - SC04,True,SC04
+2023-04-11,maintenance,Scheduled maintenance - SC04,True,SC04
+2023-07-16,maintenance,Scheduled maintenance - SC04,True,SC04
+2023-11-28,maintenance,Scheduled maintenance - SC04,True,SC04
+2024-02-13,maintenance,Scheduled maintenance - SC04,True,SC04
+2024-05-16,maintenance,Scheduled maintenance - SC04,True,SC04
+2024-09-19,maintenance,Scheduled maintenance - SC04,True,SC04
+2024-12-03,maintenance,Scheduled maintenance - SC04,True,SC04
+2023-03-04,maintenance,Scheduled maintenance - SC05,True,SC05
+2023-05-09,maintenance,Scheduled maintenance - SC05,True,SC05
+2023-08-18,maintenance,Scheduled maintenance - SC05,True,SC05
+2023-10-29,maintenance,Scheduled maintenance - SC05,True,SC05
+2024-02-02,maintenance,Scheduled maintenance - SC05,True,SC05
+2024-04-29,maintenance,Scheduled maintenance - SC05,True,SC05
+2024-07-16,maintenance,Scheduled maintenance - SC05,True,SC05
+2024-11-08,maintenance,Scheduled maintenance - SC05,True,SC05
+2023-01-19,maintenance,Scheduled maintenance - SC06,True,SC06
+2023-05-31,maintenance,Scheduled maintenance - SC06,True,SC06
+2023-09-12,maintenance,Scheduled maintenance - SC06,True,SC06
+2023-10-08,maintenance,Scheduled maintenance - SC06,True,SC06
+2024-01-06,maintenance,Scheduled maintenance - SC06,True,SC06
+2024-05-26,maintenance,Scheduled maintenance - SC06,True,SC06
+2024-07-20,maintenance,Scheduled maintenance - SC06,True,SC06
+2024-10-07,maintenance,Scheduled maintenance - SC06,True,SC06
+2023-01-27,maintenance,Scheduled maintenance - SC07,True,SC07
+2023-06-06,maintenance,Scheduled maintenance - SC07,True,SC07
+2023-09-02,maintenance,Scheduled maintenance - SC07,True,SC07
+2023-11-26,maintenance,Scheduled maintenance - SC07,True,SC07
+2024-03-08,maintenance,Scheduled maintenance - SC07,True,SC07
+2024-05-14,maintenance,Scheduled maintenance - SC07,True,SC07
+2024-08-21,maintenance,Scheduled maintenance - SC07,True,SC07
+2024-11-25,maintenance,Scheduled maintenance - SC07,True,SC07
+2023-02-13,maintenance,Scheduled maintenance - SC08,True,SC08
+2023-04-17,maintenance,Scheduled maintenance - SC08,True,SC08
+2023-07-22,maintenance,Scheduled maintenance - SC08,True,SC08
+2023-10-23,maintenance,Scheduled maintenance - SC08,True,SC08
+2024-01-07,maintenance,Scheduled maintenance - SC08,True,SC08
+2024-04-30,maintenance,Scheduled maintenance - SC08,True,SC08
+2024-07-20,maintenance,Scheduled maintenance - SC08,True,SC08
+2024-10-08,maintenance,Scheduled maintenance - SC08,True,SC08

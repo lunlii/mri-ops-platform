@@ -1,0 +1,21 @@
+procedure_code,procedure_name,template_duration_min,contrast_required,complexity,procedure_id,duration_std_pct
+MRI-BRAIN,Brain MRI,45,False,medium,1,0.18
+MRI-BRAIN-C,Brain MRI with Contrast,60,True,medium,2,0.18
+MRI-SPINE-C,Cervical Spine MRI,50,False,medium,3,0.18
+MRI-SPINE-T,Thoracic Spine MRI,50,False,medium,4,0.18
+MRI-SPINE-L,Lumbar Spine MRI,50,False,medium,5,0.18
+MRI-KNEE,Knee MRI,40,False,low,6,0.1
+MRI-SHOULDER,Shoulder MRI,40,False,low,7,0.1
+MRI-HIP,Hip MRI,45,False,low,8,0.1
+MRI-ABDOMEN,Abdomen MRI,60,True,high,9,0.28
+MRI-PELVIS,Pelvis MRI,55,True,high,10,0.28
+MRI-CARDIAC,Cardiac MRI,75,True,high,11,0.28
+MRI-BREAST,Breast MRI,60,True,high,12,0.28
+MRI-PROSTATE,Prostate MRI,70,True,high,13,0.28
+MRI-FETAL,Fetal MRI,60,False,high,14,0.28
+MRI-WRIST,Wrist MRI,35,False,low,15,0.1
+MRI-ANKLE,Ankle MRI,35,False,low,16,0.1
+MRI-NEURO-F,Neuro Functional MRI,90,False,high,17,0.28
+MRI-SPECTRO,MR Spectroscopy,80,False,high,18,0.28
+MRI-ART,MR Arthrography,55,True,medium,19,0.18
+MRI-ANGIO,MR Angiography,65,True,medium,20,0.18

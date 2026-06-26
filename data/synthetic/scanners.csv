@@ -1,0 +1,9 @@
+scanner_id,site,field_strength,status,open_bore,delay_bias_min
+SC01,Main,3.0T,active,False,2
+SC02,Main,1.5T,active,False,0
+SC03,Main,3.0T,active,True,-2
+SC04,North,1.5T,active,False,3
+SC05,North,3.0T,active,False,1
+SC06,South,1.5T,active,True,0
+SC07,South,3.0T,active,False,4
+SC08,Main,1.5T,active,False,-1
