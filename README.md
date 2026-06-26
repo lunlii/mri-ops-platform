@@ -16,6 +16,25 @@ This platform answers those questions using a governed analytics layer, two prod
 
 ---
 
+## Screenshots
+
+### Executive Overview
+![Executive Overview](app/assets/executive_overview.png)
+
+### Procedure & Scanner Performance
+![Procedure & Scanner Performance](app/assets/procedure_scanner_performance.png)
+
+### Model Performance
+![Model Performance](app/assets/model_performance.png)
+
+### Data Quality & Assumptions
+![Data Quality](app/assets/data_quality.png)
+
+### AI Assistant
+![AI Assistant](app/assets/ai_assistant.png)
+
+---
+
 ## Architecture
 
 ```
