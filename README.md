@@ -199,7 +199,7 @@ Powered by Anthropic Claude (claude-sonnet-4-6).
 ## Setup
 
 ```bash
-git clone https://github.com/yourusername/mri-ops-platform.git
+git clone https://github.com/lunlii/mri-ops-platform.git
 cd mri-ops-platform
 pip install -r requirements.txt
 cp .env.example .env  # add your API keys
