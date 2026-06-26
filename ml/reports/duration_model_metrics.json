@@ -1,0 +1,26 @@
+{
+  "model": {
+    "mae": 8.45,
+    "rmse": 12.07,
+    "mape": 15.48
+  },
+  "baseline": {
+    "mae": 9.55,
+    "rmse": 13.31,
+    "mape": 16.24
+  },
+  "train_size": 24293,
+  "test_size": 24274,
+  "features": [
+    "procedure_code",
+    "complexity",
+    "day_of_week",
+    "time_bucket",
+    "scanner_id",
+    "site",
+    "field_strength",
+    "template_duration_min",
+    "hour_of_day",
+    "is_contrast"
+  ]
+}

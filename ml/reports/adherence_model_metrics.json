@@ -1,0 +1,38 @@
+{
+  "model": {
+    "auc_roc": 0.6444,
+    "precision": 0.5846,
+    "recall": 0.6177,
+    "f1": 0.6007
+  },
+  "baseline": {
+    "f1": 0.0,
+    "strategy": "majority class"
+  },
+  "confusion_matrix": [
+    [
+      7530,
+      5107
+    ],
+    [
+      4449,
+      7188
+    ]
+  ],
+  "train_size": 24293,
+  "test_size": 24274,
+  "features": [
+    "procedure_code",
+    "complexity",
+    "day_of_week",
+    "time_bucket",
+    "scanner_id",
+    "site",
+    "field_strength",
+    "template_duration_min",
+    "hour_of_day",
+    "is_contrast"
+  ],
+  "adherence_rate_train": 0.4853,
+  "adherence_rate_test": 0.4794
+}
