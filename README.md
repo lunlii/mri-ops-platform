@@ -2,6 +2,8 @@
 
 An end-to-end analytics system for improving MRI scheduling accuracy and operational decision-making — built with Python, SQL, dbt, Streamlit, and machine learning.
 
+**[🚀 Live Demo](https://mri-ops-platform-nipm8kfbsut8astpkkozk4.streamlit.app)**
+
 ---
 
 ## The Problem
